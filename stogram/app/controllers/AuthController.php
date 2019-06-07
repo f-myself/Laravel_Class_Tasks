@@ -41,4 +41,10 @@ class AuthController extends BaseController
         }
         return Redirect::action('AuthController@showLoginForm');
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return Redirect::action('HomeController@showIndex');
+    }
 }
